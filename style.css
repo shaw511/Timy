@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|PT+Sans');
+
 body {
+	margin:0;
+	padding: 0;
+	color:#eaeaea;
+	font-family: 'PT Sans', sans-serif;
 }
 
+
+}
 #tasks {
 	list-style: none;
 	padding: 0;
@@ -8,40 +16,37 @@ body {
 }
 .wrapper {
 	display: grid;
-	grid-template-columns:1fr 2fr 2fr;
-	grid-template-rows: 1fr 300px 4fr 1fr;
-	grid-gap : 10px;
+	grid-template-columns:1fr 4fr;
+	grid-template-rows: 45px 6fr 6fr 1fr ;
 	grid-template-areas:
-		'sidebar header header'
-		'sidebar graphs graphs'
-		'sidebar new-tasks current-tasks'
-		'sidebar footer footer';
+		'header header'
+		'sidebar  current-tasks'
+		'sidebar old-tasks'
+		'footer footer';
 }
 .header {
+	line-height:5%;
 	grid-area: header;
-	background-color: #4ba7b7;
-	border-radius: 5px;
+	background-color: #3d3d3d;
+	font-family: 'Lobster', sans-serif;
 }
-.current-tasks{
+.current-tasks {
 	grid-area: current-tasks;
-	background-color: #5f9da8;
-	border-radius: 5px;
+	background-color: #565656;
 }
-.new-tasks {
-	grid-area: new-tasks;
-	background-color: #447d87;
-	border-radius: 5px;
+.old-tasks {
+	grid-area: old-tasks;
+	background-color: #565656;
 }
-.graphs {
-	grid-area: graphs;
-	background-color: #53696d;
-	border-radius: 5px;
-}
-.footer{
+.footer {
 	grid-area:footer;
-	background-color: #172a2d;
+	background-color: #3d3d3d;
 }
 .sidebar{
 	grid-area:sidebar;
-	background-color: #751108;
+	background-color: #494949;
+}
+a {
+	text-decoration: none;
+	color:#eaeaea;
 }
